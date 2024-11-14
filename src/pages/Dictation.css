@@ -1,0 +1,244 @@
+/* Base styles for the whole dictation page */
+.dictation-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #74ebd5, #ACB6E5); /* Gradient background */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s;
+    padding: 20px;
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3); /* Soft inner shadow */
+    text-align: center; /* Center text for smaller screens */
+}
+
+/* Title styles */
+.dictation-title {
+    font-size: 2.8rem; /* Slightly larger font size */
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+/* Student name styles */
+.student-name {
+    font-size: 1.7rem; /* Increased font size */
+    margin-bottom: 20px;
+    color: #444; /* Darker color for contrast */
+}
+
+/* Option buttons styles */
+.dictation-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows the buttons to wrap on smaller screens */
+    justify-content: center; /* Center buttons on small screens */
+}
+
+.option-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px; /* More rounded corners */
+    background: linear-gradient(45deg, #FF6F61, #FF5A47, #FF8C42); /* Multi-color gradient */
+    color: white;
+    font-size: 1.1rem; /* Slightly larger font size */
+    cursor: pointer;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    flex: 1 1 auto; /* Allows the buttons to resize to fill available space */
+    margin: 5px; /* Add margin between buttons for wrapping */
+}
+
+.option-button:hover {
+    background: linear-gradient(45deg, #FF5A47, #FF6F61, #FF8C42); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.option-button.active {
+    background: linear-gradient(45deg, #FF8C42, #FF5A47, #FF6F61); /* Active button gradient */
+}
+
+/* Flashcard styles */
+.flashcard-container {
+    perspective: 1000px; /* 3D perspective */
+}
+
+.flashcard {
+    width: 320px; /* Increased width */
+    height: 220px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    max-width: 100%; /* Ensures it does not overflow on small screens */
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Front and back styles */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* Back styles */
+.back {
+    background: linear-gradient(135deg, #4CAF50, #45A049); /* Green gradient for the back */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Bead styles */
+.beads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.bead {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFC107, #FFB300); /* Yellow gradient beads */
+    margin: 0 5px;
+}
+
+/* Excitement icons */
+.excitement-icons {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* Timer styles */
+.timer {
+    position: absolute; /* Positioning timer on the right */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    font-size: 2rem;
+    color: #000; /* Timer text color */
+    padding: 10px 15px; /* Padding for better visibility */
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Answer status styles */
+.answer-status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+.correct {
+    background: linear-gradient(135deg, #4CAF50, #388E3C); /* Green gradient for correct */
+}
+
+.incorrect {
+    background: linear-gradient(135deg, #FF5722, #D32F2F); /* Red gradient for incorrect */
+}
+
+/* Input styles */
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; /* Width of the input */
+    font-size: 1rem;
+}
+
+/* Button styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #FF6F61, #FF5A47); /* Coral gradient */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%; /* Make buttons responsive */
+    max-width: 200px; /* Ensure buttons don't become too wide */
+}
+
+button:hover {
+    background: linear-gradient(45deg, #FF5A47, #FF6F61); /* Darker coral on hover */
+}
+
+/* Voice recognition button styles */
+.voice-recognition-button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #008CBA, #007B9E); /* Blue gradient */
+}
+
+.voice-recognition-button:hover {
+    background: linear-gradient(135deg, #007B9E, #008CBA); /* Darker blue on hover */
+}
+
+/* Responsive styles using media queries */
+@media (max-width: 768px) {
+    .dictation-title {
+        font-size: 2.2rem; /* Reduce title size on tablets */
+    }
+
+    .student-name {
+        font-size: 1.4rem; /* Reduce name size on tablets */
+    }
+
+    .flashcard {
+        width: 280px; /* Adjust flashcard size for smaller screens */
+        height: 180px;
+    }
+
+    .timer {
+        font-size: 1.5rem; /* Reduce timer size for tablets */
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dictation-title {
+        font-size: 1.8rem; /* Further reduce title size for mobile */
+    }
+
+    .student-name {
+        font-size: 1.2rem; /* Adjust student name font size */
+    }
+
+    .flashcard {
+        width: 240px; /* Further reduce flashcard size for mobile */
+        height: 160px;
+    }
+
+    .timer {
+        font-size: 1.2rem; /* Reduce timer size for mobile */
+        top: 10px;
+        right: 10px;
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    .option-button {
+        font-size: 0.9rem; /* Reduce font size for option buttons */
+    }
+}

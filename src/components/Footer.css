@@ -1,0 +1,54 @@
+/* Footer.css */
+
+.home-footer {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons i:hover {
+    transform: scale(1.2);
+    color: #ff5f6d; /* A nice accent color */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
