@@ -17,7 +17,7 @@ const Login = () => {
         // Add your login logic here
 
         try {
-            const response = await fetch('http://localhost:3001/login', {
+            const response = await fetch('https://thebeadappbe.vercel.app/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const Login = () => {
                 setModalIsOpen(true);
                 setTimeout(() => {
                     setModalIsOpen(false);
-                    navigate('/dashboard');
+                    navigate('/selectionPage');
                     toast.success('Login Successful! Redirecting to dashboard...', { position: 'top-right' });
                 }, 3000);
             }

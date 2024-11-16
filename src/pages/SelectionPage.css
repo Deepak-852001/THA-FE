@@ -1,0 +1,183 @@
+/* Home.css */
+.home-container {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: rgba(0, 121, 107, 0.9);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(0, 150, 136, 0.9), rgba(0, 121, 107, 0.9));
+    color: white;
+    width: 50%; /* Set width for the hero section */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Rounded corners */
+    margin-right: 20px; /* Space between hero section and features */
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 20px; /* Space between buttons */
+    align-items: center; /* Center buttons horizontally */
+}
+
+.cta-button {
+    background: linear-gradient(90deg, #ff4081, #ff80ab);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center text */
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Features Section */
+.features {
+    width: 50%; /* Set width for the features section */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Arrange features vertically */
+}
+
+.features-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgba(0, 150, 136, 1);
+    text-align: left; /* Align title to the left */
+}
+
+.feature-cards {
+    display: flex;
+    flex-direction: column; /* Stack features vertically */
+    gap: 20px; /* Space between features */
+}
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Align text to the left */
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem; /* Size of feature icon */
+    margin-right: 15px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin: 0 0 5px; /* Margin for spacing */
+    color: rgba(0, 150, 136, 1);
+    font-weight: bold; /* Bold title */
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Footer Section */
+.footer {
+    background-color: rgba(0, 121, 107, 0.9);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    color: rgba(77, 182, 172, 1);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section,
+    .features {
+        width: 100%; /* Full width on small screens */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .features-title {
+        font-size: 2rem;
+    }
+
+    .feature-title {
+        font-size: 1.25rem;
+    }
+}

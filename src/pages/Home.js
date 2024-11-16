@@ -56,7 +56,7 @@ const Home = () => {
                     <p className="hero-subtitle">Join us for an exciting journey of knowledge and growth!</p>
                     <div className="cta-buttons">
                         <Link to="/login" className="cta-button">Login</Link>
-                        <Link to="/register" className="cta-button">Get Started</Link>
+                        <Link to="/register" className="cta-button">Register Now</Link>
                     </div>
                 </div>
 

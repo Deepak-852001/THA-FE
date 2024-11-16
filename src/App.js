@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'; // Importing the new Home component
 import Login from './pages/Login';
+import SelectionPage from './pages/SelectionPage';
+import PracticePage from './pages/PracticePage';
 import Dashboard from './pages/Dashboard';
 import Dictation from './pages/Dictation';
 import Game from './pages/Games';
@@ -13,6 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} /> {/* Homepage route */}
         <Route path="/login" element={<Login />} /> {/* Login page */}
+        <Route path="/selectionPage" element = {<SelectionPage />} />
+        <Route path='/practicePage' element = {<PracticePage />} />
         <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard page */}
         <Route path="/dictation" element={<Dictation />} /> {/* Dictation page */}
         <Route path="/game/:level/:category" element={<Game />} /> {/* Game page */}
